@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class SlackUser extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['slack_id', 'name'];
 }
