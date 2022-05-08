@@ -755,6 +755,9 @@ select {
 .max-w-xl {
   max-width: 36rem;
 }
+.max-w-sm {
+  max-width: 24rem;
+}
 .max-w-7xl {
   max-width: 80rem;
 }
@@ -902,6 +905,10 @@ select {
 .bg-indigo-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(238 242 255 / var(--tw-bg-opacity));
+}
+.bg-brand-primary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(62 78 136 / var(--tw-bg-opacity));
 }
 .fill-current {
   fill: currentColor;
