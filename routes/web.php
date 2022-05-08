@@ -1,9 +1,8 @@
 <?php
 
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
-
-Use App\Models\Actions;
-Use App\Models\Activity;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,12 +16,16 @@ Use App\Models\Activity;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return Inertia::render('Welcome', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+    ]);
 });
 
-Route::get('/stats', function () {
-    $action = Action::all();
-    $activity = Activity::all();
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-    return view('stats', ['activity' => $activity, 'action' => $action]);
-});
+require __DIR__.'/auth.php';
