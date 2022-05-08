@@ -1277,6 +1277,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
+.active\:bg-brand-primary:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(62 78 136 / var(--tw-bg-opacity));
+}
 .active\:text-gray-700:active {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
@@ -1284,6 +1288,9 @@ select {
 .active\:text-gray-500:active {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+.active\:bg-blend-lighten:active {
+  background-blend-mode: lighten;
 }
 @media (prefers-color-scheme: dark) {
 
